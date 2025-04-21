@@ -10,7 +10,7 @@ public static class Extensions
         servicesCollection.AddScoped<INoteRepository, NoteRepository>();
         servicesCollection.AddDbContext<AppContext>(x =>
         {
-            x.UseNpgsql("Host=localhost; Database=Notes; Username=postgres;Password=postgres");
+            x.UseNpgsql("Host=localhost; Database=notes; Username=postgres;Password=postgres");
         });
 
         return servicesCollection;

@@ -22,22 +22,22 @@ public class NoteController : ControllerBase
         return NoContent();
     }
     
-    [HttpGet("{id:int}")]
-    public async Task<IActionResult> GetNoteAsync([FromRoute]int id)
+    [HttpGet("{id:guid}")]
+    public async Task<IActionResult> GetNoteAsync([FromRoute]Guid id)
     {
         var result = await _noteService.GetByIdAsync(id);
         return Ok(result);
     }
     
-    [HttpPut("{id:int}")]
-    public async Task<IActionResult> UpdateNoteAsync([FromRoute]int id, string newText)
+    [HttpPut("{id:guid}")]
+    public async Task<IActionResult> UpdateNoteAsync([FromRoute]Guid id, string newText)
     {
         await _noteService.UpdateAsync(id, newText);
         return NoContent();
     }
     
-    [HttpDelete("{id:int}")]
-    public async Task<IActionResult> DeleteNoteAsync([FromRoute]int id)
+    [HttpDelete("{id:guid}")]
+    public async Task<IActionResult> DeleteNoteAsync([FromRoute]Guid id)
     {
         await _noteService.DeleteAsync(id);
         return NoContent();

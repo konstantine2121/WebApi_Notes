@@ -21,7 +21,7 @@ public class NoteService : INoteService
         await _noteRepository.CreateAsync(note, cancellationToken);
     }
 
-    public async Task<string> GetByIdAsync(int id, CancellationToken cancellationToken = default)
+    public async Task<string> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
     {
         var note = await _noteRepository.GetByIdAsync(id, cancellationToken);
         if (note == null)
@@ -32,7 +32,7 @@ public class NoteService : INoteService
         return note.Text;
     }
 
-    public async Task UpdateAsync(int id, string newText, CancellationToken cancellationToken = default)
+    public async Task UpdateAsync(Guid id, string newText, CancellationToken cancellationToken = default)
     {
         var note = await _noteRepository.GetByIdAsync(id, cancellationToken);
         if (note == null)
@@ -44,7 +44,7 @@ public class NoteService : INoteService
         await _noteRepository.UpdateAsync(note, cancellationToken);
     }
 
-    public async Task DeleteAsync(int id, CancellationToken cancellationToken = default)
+    public async Task DeleteAsync(Guid id, CancellationToken cancellationToken = default)
     {
         var note = await _noteRepository.GetByIdAsync(id, cancellationToken);
         if (note == null)

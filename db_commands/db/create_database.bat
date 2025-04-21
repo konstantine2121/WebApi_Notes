@@ -1,4 +1,4 @@
 set PGPASSWORD=postgres
-psql -h localhost -p 5432 -U postgres -c "CREATE DATABASE Notes;"
+psql -h localhost -p 5432 -U postgres -c "CREATE DATABASE notes;"
 
 pause

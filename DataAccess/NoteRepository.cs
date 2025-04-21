@@ -18,7 +18,7 @@ internal class NoteRepository : INoteRepository
         await _context.SaveChangesAsync(cancellationToken);
     }
 
-    public async Task<Note?> GetByIdAsync(int id, CancellationToken cancellationToken = default)
+    public async Task<Note?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
     {
        return await _context.Notes.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
     }
