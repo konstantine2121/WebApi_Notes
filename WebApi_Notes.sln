@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{E9CB9658-9DD4-4F2E-B1DA-3140C5026DFC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{A351AC19-2DAB-4253-BE1E-1D65DA2A24C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes_Client", "Notes_Client\Notes_Client.csproj", "{ACE97CFA-3B8A-4EBC-9BF0-80F746B4BD18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,12 @@ Global
 		{E9CB9658-9DD4-4F2E-B1DA-3140C5026DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9CB9658-9DD4-4F2E-B1DA-3140C5026DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9CB9658-9DD4-4F2E-B1DA-3140C5026DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACE97CFA-3B8A-4EBC-9BF0-80F746B4BD18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACE97CFA-3B8A-4EBC-9BF0-80F746B4BD18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACE97CFA-3B8A-4EBC-9BF0-80F746B4BD18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACE97CFA-3B8A-4EBC-9BF0-80F746B4BD18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ACE97CFA-3B8A-4EBC-9BF0-80F746B4BD18} = {A351AC19-2DAB-4253-BE1E-1D65DA2A24C0}
 	EndGlobalSection
 EndGlobal

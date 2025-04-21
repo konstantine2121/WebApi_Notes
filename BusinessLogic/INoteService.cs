@@ -1,3 +1,5 @@
+using DataAccess;
+
 namespace BusinessLogic;
 
 public interface INoteService

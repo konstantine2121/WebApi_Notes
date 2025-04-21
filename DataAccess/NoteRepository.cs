@@ -23,6 +23,18 @@ internal class NoteRepository : INoteRepository
        return await _context.Notes.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
     }
 
+    public async Task<IReadOnlyList<Note>> GetAllAsync(CancellationToken cancellationToken = default)
+    {
+        return await _context.Notes.ToListAsync(cancellationToken);
+    }
+
+    public async Task<IReadOnlyList<Note>> GetByIdsAsync(IEnumerable<Guid> ids, CancellationToken cancellationToken = default)
+    {
+        HashSet<Guid> idsSet = new HashSet<Guid>(ids);
+        
+        return await _context.Notes.Where(note => idsSet.Contains(note.Id)).ToListAsync(cancellationToken);
+    }
+
     public async Task UpdateAsync(Note note, CancellationToken cancellationToken = default)
     {
         note.Updated = DateTime.UtcNow;
